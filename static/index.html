@@ -6,33 +6,44 @@
     <title>AMES City</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,-25,0" />
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js" charset="utf-8"></script>
 </head>
 <body>
     <div class="free-space"></div>
     <nav>
         <div class="titles">
+            <h3><a href="#history">HISTORY</a></h3>
             <h3><a href="#voyager">ANALYSIS</a></h3>
             <h3><a href="#pricing">PRICING</a></h3>
             <h3>ABOUT US</h3>
         </div>
     </nav>
-
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div class="mother-div">
         <div class="container">
             <div>
-                <img src="/images/AMES 3D.png" alt="Can" class="can">
-            </div>  
+                <img src="/images/OakesAmes.png" alt="Can" class="can">
+            </div>
             <div class="titletext">
                 <h1 class="GREEN">AMES</h1>
                 <h1 class="TEA">CITY</h1>
             </div>
         </div>
-        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div id="history">
+            <h2>HISTORY OF AMES CITY</h2>
+        </div>
         <div class="rotcan">
             <img src="/images/circle.png" alt="Circle" class="bg-circle">
             <img src="/images/white_can.png" alt="White Can" class="main-can">
         </div>
-        
+        <div id="voyager">
+            <h1>Market Analysis</h1>
+            <div id="scatter-plot"></div>
+            <div id="boxplot"></div>
+        </div>
+
+        <div class="predictive_section">
         <div class="predictive_section">
             
             <div id="pricing">

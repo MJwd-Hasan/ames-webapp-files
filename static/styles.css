@@ -43,7 +43,7 @@ nav {
 
 h3 {
     color: antiquewhite;
-    font-size: large;
+    font-size: 20px;
 }
 
 .mother-div {
@@ -107,6 +107,21 @@ h1 {
     100% { transform: translate(-50%, -40%) rotate(2deg); -webkit-transform: translate(-50%, -40%) rotate(2deg); -moz-transform: translate(-50%, -40%) rotate(2deg); -ms-transform: translate(-50%, -40%) rotate(2deg); -o-transform: translate(-50%, -40%) rotate(2deg); }
 }
 
+
+#history{
+    padding: 5vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#history h2 {
+    font-size: 30px;
+    color: antiquewhite;
+}
+
+
+
 .rotcan {
     position: relative;
     margin: 5vh auto; 
@@ -166,6 +181,44 @@ h1 {
     opacity: 1;
     visibility: visible;
 }
+
+
+/* Market Analysis Section */
+#voyager {
+    padding: 5vh;
+    text-align: center;
+}
+
+#voyager h1 {
+    font-size: 30px; /* Overrides the giant 250px h1 from the hero section */
+    color: antiquewhite;
+    margin-bottom: 30px;
+}
+
+#scatter-plot {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: rgba(20, 20, 20, 0.8);
+    border: 1px solid rgba(250, 235, 215, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+#boxplot {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    margin: 30px auto 0 auto;
+    background-color: rgba(20, 20, 20, 0.8);
+    border: 1px solid rgba(250, 235, 215, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
 
 #pricing {
     display: flex;

@@ -61,3 +61,36 @@ form.addEventListener('submit', async function(event) {
         resultContainer.style.display = 'block';
     }
 });
+
+// Function to load and render the analysis graph
+async function loadAnalysisGraph() {
+    try {
+        // Fetch the JSON data from your FastAPI backend
+        const response = await fetch('/api/analysis-graph');
+        const graphData = await response.json();
+
+        // Plotly uses the 'data' and 'layout' from the JSON to build the graph
+        Plotly.newPlot('scatter-plot', graphData.data, graphData.layout, {responsive: true});
+        
+    } catch (error) {
+        console.error("Error loading the graph:", error);
+        document.getElementById('scatter-plot').innerHTML = "<p style='color: antiquewhite; padding: 20px;'>Failed to load graph.</p>";
+    }
+}
+
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', loadAnalysisGraph);
+
+async function loadboxPlot() {
+    try {
+        // FIX: Added "-graph" to match the FastAPI route exactly
+        const response = await fetch('/api/boxplot-graph'); 
+        const boxPlotData = await response.json();
+        Plotly.newPlot('boxplot', boxPlotData.data, boxPlotData.layout, {responsive: true});
+    } catch (error) {
+        console.error("Error loading the box plot:", error);
+        document.getElementById('boxplot').innerHTML = "<p style='color: antiquewhite; padding: 20px;'>Failed to load box plot.</p>";
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadboxPlot);
