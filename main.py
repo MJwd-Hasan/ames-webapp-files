@@ -3,6 +3,9 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import statsmodels.api as sm
 import pandas as pd
+import plotly.express as px
+import json
+
 
 app = FastAPI()
 
@@ -13,6 +16,51 @@ class HouseFeatures(BaseModel):
     overall_qual: int
     gr_liv_area: int
     total_bsmt_sf: float
+
+df_analysis = pd.read_csv('AMES_Selected.csv')  # Ensure this file exists and has the correct columns
+
+
+@app.get('/api/analysis-graph')
+def get_analysis_graph():
+    fig = px.scatter(
+        df_analysis, 
+        x='Gr Liv Area', 
+        y='SalePrice',
+        title='Above Ground Living Area vs. Sale Price',
+        labels={'Gr Liv Area': 'Above Ground Living Area (sq ft)', 'SalePrice': 'Sale Price ($)'},
+        color_discrete_sequence=['#4CAF50'], # Matching your site's green accent
+        opacity=0.7
+    )
+    
+    fig.update_layout(
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
+        font=dict(color='antiquewhite')
+    )
+    graph_json = json.loads(fig.to_json())
+    return graph_json
+
+boxplot_analysis = pd.read_csv('boxplot.csv')
+
+@app.get('/api/boxplot-graph')
+def get_boxplot_graph():
+    fig = px.box(
+        boxplot_analysis, 
+        x='Building Type', 
+        y='SalePrice',
+        title='Sale Price Distribution by Building Type',
+        labels={'Building Type': 'Building Type', 'SalePrice': 'Sale Price ($)'},
+        color_discrete_sequence=['#4CAF50'] # Matching your site's green accent
+    )
+    
+    fig.update_layout(
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
+        font=dict(color='antiquewhite')
+    )
+    graph_json = json.loads(fig.to_json())
+    return graph_json
+
 
 @app.post("/predict")
 def predict_price(features: HouseFeatures):
