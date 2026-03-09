@@ -1,4 +1,8 @@
 fastapi
+uvicorn[standard]
 pydantic
-statsmodels
 pandas
+plotly
+joblib
+scikit-learn
+scipy
