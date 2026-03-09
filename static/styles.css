@@ -231,7 +231,7 @@ h1 {
     color: antiquewhite;
 }
 
-#scatter-plot, #boxplot, #lineplot {
+#scatter-plot, #boxplot, #lineplot, #mapplot {
     width: 100%;
     max-width: 800px;
     height: 500px;

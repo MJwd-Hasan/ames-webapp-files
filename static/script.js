@@ -102,3 +102,22 @@ document.addEventListener('DOMContentLoaded', () => {
     loadboxPlot();
     loadLinePlot();
 });
+
+// Add this new function
+async function loadMapPlot() {
+    try {
+        const response = await fetch('/api/mapplot'); 
+        const mapData = await response.json();
+        Plotly.newPlot('mapplot', mapData.data, mapData.layout, {responsive: true});
+    } catch (error) {
+        console.error("Failed to load the map plot:", error);
+    }
+}
+
+// Update your event listener to trigger the map when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    loadAnalysisGraph();
+    loadboxPlot();
+    loadLinePlot();
+    loadMapPlot(); // <-- Call the new function here
+});
