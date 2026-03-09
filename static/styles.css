@@ -526,15 +526,138 @@ h1 {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(250, 235, 215, 0.3);
 }
-
-
 @media screen and (max-width: 1024px) {
     h1 { font-size: 150px; }
+    
+    /* Adjust hero text offsets for smaller font */
+    .GREEN { transform: translateX(30px); }
+    .TEA { transform: translate(-100px, 150px); }
+    
     .can { width: 350px; }
+    .rotcan { width: 400px; height: 400px; }
+
+    /* Shrink the drink section images slightly */
+    .each { gap: 30px; }
+    .each img { width: 300px; }
+    
+    #history h2 { 
+        font-size: 40px; 
+        transform: translateY(400px); /* Adjusting that massive drop */
+    }
 }
 
+/* Small Tablets & Large Phones */
+@media screen and (max-width: 768px) {
+    /* Stack the drink sections vertically instead of side-by-side */
+    .each {
+        flex-direction: column;
+        text-align: center;
+        padding: 5vh 5%;
+        gap: 20px;
+    }
+    
+    /* Center the text and list items */
+    .mintcontainer ul { text-align: center; }
+    
+    /* Disable the hover blur effect for touch devices */
+    .each img {
+        filter: blur(0);
+        -webkit-filter: blur(0);
+        transform: rotate(0deg) !important; /* Stand the image up straight */
+        animation: hovering 4s alternate infinite; /* Use the gentler float */
+    }
+    
+    .each p {
+        filter: blur(0);
+        -webkit-filter: blur(0);
+    }
+}
+/* =========================================
+   RESPONSIVE DESIGN (Tablets & Phones)
+   ========================================= */
+
+/* Tablets (iPad, etc.) */
+@media screen and (max-width: 1024px) {
+    h1 { font-size: 150px; }
+    
+    /* Adjust hero text offsets for smaller font */
+    .GREEN { transform: translateX(30px); }
+    .TEA { transform: translate(-100px, 150px); }
+    
+    .can { width: 350px; }
+    .rotcan { width: 400px; height: 400px; }
+
+    /* Shrink the drink section images slightly */
+    .each { gap: 30px; }
+    .each img { width: 300px; }
+    
+    #history h2 { 
+        font-size: 40px; 
+        transform: translateY(400px); /* Adjusting that massive drop */
+    }
+}
+
+/* Small Tablets & Large Phones */
+@media screen and (max-width: 768px) {
+    /* Stack the drink sections vertically instead of side-by-side */
+    .each {
+        flex-direction: column;
+        text-align: center;
+        padding: 5vh 5%;
+        gap: 20px;
+    }
+    
+    /* Center the text and list items */
+    .mintcontainer ul { text-align: center; }
+    
+    /* Disable the hover blur effect for touch devices */
+    .each img {
+        filter: blur(0);
+        -webkit-filter: blur(0);
+        transform: rotate(0deg) !important; /* Stand the image up straight */
+        animation: hovering 4s alternate infinite; /* Use the gentler float */
+    }
+    
+    .each p {
+        filter: blur(0);
+        -webkit-filter: blur(0);
+    }
+}
+
+/* Mobile Phones */
 @media screen and (max-width: 600px) {
-    h1 { font-size: 70px; }
+    /* Navigation adjustments */
+    .titles { gap: 2vh; flex-wrap: wrap; justify-content: center; }
+    h3 { font-size: 14px; }
+    
+    /* Hero Section */
+    h1 { font-size: 80px; }
+    /* Reset offsets so text stays grouped tightly on small screens */
+    .GREEN { transform: translateY(-20px); }
+    .TEA { transform: translateY(20px); }
     .can { width: 220px; }
-    .rotcan { width: 300px; height: 300px; }
+    .titletext { flex-direction: column; gap: 0; }
+    
+    /* Content sections */
+    #history h2 { 
+        font-size: 30px; 
+        transform: translateY(150px); /* Bring text back up to view */
+    }
+    #history p { font-size: 16px; margin: 10px; }
+    
+    .rotcan { width: 280px; height: 280px; }
+    
+    .mintcontainer h1 { font-size: 5vh; }
+    .mintcontainer p { font-size: 3vh; }
+    .mintcontainer bold { font-size: 4vh; }
+    
+    /* Forms and Cards */
+    .form, #about {
+        width: 95%;
+        padding: 25px 15px;
+    }
+    
+    #scatter-plot, #boxplot, #lineplot {
+        height: 400px; /* Reduce graph height slightly for mobile */
+    }
 }
