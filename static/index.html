@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMES City</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,-25,0" />
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js" charset="utf-8"></script>
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+    <link rel="icon" href="/images/icon.png" width = 500px height = 500px>
 </head>
 <body>
     <div class="free-space"></div>
@@ -15,68 +15,210 @@
             <h3><a href="#history">HISTORY</a></h3>
             <h3><a href="#voyager">ANALYSIS</a></h3>
             <h3><a href="#pricing">PRICING</a></h3>
-            <h3>ABOUT US</h3>
+            <h3><a href="#about">About Us</a></h3>
         </div>
     </nav>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br>
     <div class="mother-div">
         <div class="container">
-            <div>
-                <img src="/images/OakesAmes.png" alt="Can" class="can">
-            </div>
+            <img src="/images/OakesAmes.png" alt="Can" class="can">
             <div class="titletext">
                 <h1 class="GREEN">AMES</h1>
                 <h1 class="TEA">CITY</h1>
             </div>
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <div id="history">
-            <h2>HISTORY OF AMES CITY</h2>
+            <div class="history-content">
+                <h2>HISTORY OF AMES CITY</h2>
+                <img src="images/rail.png" alt="Train" class="rail">
+                <p>Ames, Iowa, was established in 1864 as a vital station stop along the Cedar Rapids and Missouri Railroad. Founded by railroad magnate John Blair, the city was named in honor of U.S. Congressman Oakes Ames, a key figure in the construction of the transcontinental railroad. The city's history and growth have been profoundly shaped by the earlier 1858 establishment of the Iowa Agricultural College and Model Farm—now world-renowned as Iowa State University. Over the decades, Ames evolved from a modest midwestern transit hub into a vibrant center for agricultural research, higher education, and technological innovation.</p>
+            </div>
         </div>
         <div class="rotcan">
             <img src="/images/circle.png" alt="Circle" class="bg-circle">
-            <img src="/images/white_can.png" alt="White Can" class="main-can">
+            <img src="/images/white_can.png" alt="Can" class="main-can">
         </div>
         <div id="voyager">
             <h1>Market Analysis</h1>
             <div id="scatter-plot"></div>
             <div id="boxplot"></div>
+            <br><br><br>
+            <h2>Pricing Based On Foundation Structure</h2>
         </div>
+        
+        <div class="each">
+        <img src="/images/Brick Foundation.png" alt="BRICK AND TILE">
+        <div class="mintcontainer">
+            <h1>Brick & Tile</h1>
+            <p>Median Pricing <bold>$122800.00</bold></p>
+            <br>
+            <ul>
+                <li><strong>Era:</strong> Most commonly found in older, historic homes built before World War II.</li>
+                <li><strong>Material:</strong> Constructed using fired clay bricks and hollow structural terracotta tiles.</li>
+                <li><strong>Durability:</strong> Very sturdy, though the mortar can deteriorate and turn to dust over long periods.</li>
+                <li><strong>Moisture Resistance:</strong> Highly porous; prone to moisture seepage and damp basements without proper exterior grading.</li>
+                <li><strong>Maintenance:</strong> Requires periodic "repointing" (scraping out and replacing old mortar) to maintain structural integrity.</li>
+                <li><strong>Aesthetics:</strong> Offers a classic, masonry appearance where the foundation is visible above grade.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="each">
+        <div class="mintcontainer">
+            <h1>Cinder Block</h1>
+            <p>Median Pricing <bold>$140000.00</bold></p>
+            <br>
+            <ul>
+                <li><strong>Era:</strong> The standard for mid-century modern construction, highly popular from the 1950s through the 1970s.</li>
+                <li><strong>Material:</strong> Built using stacked Concrete Masonry Units (CMUs), held together by mortar.</li>
+                <li><strong>Strength:</strong> Excellent compressive strength to hold the house up, though weaker against lateral (sideways) soil pressure.</li>
+                <li><strong>Vulnerabilities:</strong> The mortar joints create natural weak points where water intrusion or bowing can occur.</li>
+                <li><strong>Insulation:</strong> The hollow cores of the blocks can be filled with concrete or insulating materials to improve thermal efficiency.</li>
+                <li><strong>Cost:</strong> Provided a highly cost-effective and faster alternative to poured concrete during its peak usage.</li>
+            </ul>
+        </div>
+        <img src="/images/Cinder Block.png" alt="CINDER BLOCK">
+    </div>
+
+    <div class="each">
+        <img src="/images/Poured Concrete.png" alt="POURED CONCRETE">
+        <div class="mintcontainer">
+            <h1>Poured Concrete</h1>
+            <p>Median Pricing <bold>$208700.00</bold></p>
+            <br>
+            <ul>
+                <li><strong>Era:</strong> The gold standard for modern home construction, dominating from the late 20th century to the present.</li>
+                <li><strong>Material:</strong> Solid, continuous liquid concrete poured into forms, usually heavily reinforced with steel rebar.</li>
+                <li><strong>Strength:</strong> Exceptional lateral and compressive strength; highly resistant to shifting soils and heavy earth pressure.</li>
+                <li><strong>Moisture Resistance:</strong> The dense, seamless, joint-free construction minimizes entry points for water, making it highly waterproof.</li>
+                <li><strong>Versatility:</strong> Can be easily adapted and poured into complex footprint shapes and varying depths.</li>
+                <li><strong>Lifespan:</strong> Offers the best long-term durability, lowest maintenance, and excellent fire resistance.</li>
+            </ul>
+        </div>
+    </div>
+
+        <div id="lineplot"></div>
 
         <div class="predictive_section">
-        <div class="predictive_section">
-            
-            <div id="pricing">
-                <h1>Find your dream home at AMES</h1>
-            </div>
-
+            <div id="pricing"><h1>Find your dream home at AMES</h1></div>
             <div class="form">
                 <form id="prediction-form">
-                    <label for="overall_qual">Overall Quality:</label>
-                    <input type="number" id="overall_qual" placeholder='Min: 1 Max: 10' required>
-                    
-                    <label for="gr_liv_area">Above Ground Living Area:</label>
-                    <input type="number" id="gr_liv_area" placeholder='Up to 5000 sq ft' required>
+                    <label for="overall_qual">Overall Quality (1-10):</label>
+                    <input type="number" id="overall_qual" required>
 
-                    <label for="total_bsmt_sf">Total Basement Area preferred:</label>
-                    <input type="number" id="total_bsmt_sf" placeholder='Max 6000 sq ft' required>
+                    <label for="gr_liv_area">Above Ground Living Area (sq ft):</label>
+                    <input type="number" id="gr_liv_area" placeholder = '500-5000 SF' required>
+
+                    <label for="total_bsmt_sf">Total Basement Area (sq ft):</label>
+                    <input type="number" id="total_bsmt_sf" required>
+
+                    <label for="tot_rms_abv_grd">Total Rooms Above Ground:</label>
+                    <input type="number" id="tot_rms_abv_grd" placeholder="2-15 available" required>
+
+                    <label for="full_bath">Full Bathrooms:</label>
+                    <input type="number" id="full_bath" placeholder= "Max 4 available" required>
+
+                    <label for="garage_cars">Garage Capacity (Cars):</label>
+                    <input type="number" id="garage_cars" placeholder = 'Max 5 available' required>
+
+                    <label for="age">Property Age (Years):</label>
+                    <input type="number" id="age" placeholder= "On average 30"  required>
+
+                    <label for="neighborhood">Neighborhood:</label>
+                        <select id="neighborhood" required>
+                            <option value="NAmes">North Ames</option>
+                            <option value="Gilbert">Gilbert</option>
+                            <option value="StoneBr">Stone Brook</option>
+                            <option value="NWAmes">Northwest Ames</option>
+                            <option value="Somerst">Somerset</option>
+                            <option value="BrDale">Briardale</option>
+                            <option value="NPkVill">Northpark Villa</option>
+                            <option value="NridgHt">Northridge Heights</option>
+                            <option value="Blmngtn">Bloomington Heights</option>
+                            <option value="NoRidge">Northridge</option>
+                            <option value="SawyerW">Sawyer West</option>
+                            <option value="Sawyer">Sawyer</option>
+                            <option value="Greens">Greens</option>
+                            <option value="BrkSide">Brookside</option>
+                            <option value="OldTown">Old Town</option>
+                            <option value="IDOTRR">Iowa DOT and Rail Road</option>
+                            <option value="ClearCr">Clear Creek</option>
+                            <option value="SWISU">South & West of ISU</option>
+                            <option value="Edwards">Edwards</option>
+                            <option value="CollgCr">College Creek</option>
+                            <option value="Crawfor">Crawford</option>
+                            <option value="Blueste">Bluestem</option>
+                            <option value="Mitchel">Mitchell</option>
+                            <option value="Timber">Timberland</option>
+                            <option value="MeadowV">Meadow Village</option>
+                            <option value="Veenker">Veenker</option>
+                            <option value="GrnHill">Green Hills</option>
+                            <option value="Landmrk">Landmark</option>
+                        </select>
+
+                        <label for="foundation">Foundation:</label>
+                        <select id="foundation" required>
+                            <option value="CBlock">Cinder Block</option>
+                            <option value="PConc">Poured Concrete</option>
+                            <option value="Wood">Wood</option>
+                            <option value="BrkTil">Brick & Tile</option>
+                            <option value="Slab">Slab</option>
+                            <option value="Stone">Stone</option>
+                        </select>
+
+                        <label for="building_type">Building Type:</label>
+                        <select id="building_type" required>
+                            <option value="Single Family Residential">Single Family Residential</option>
+                            <option value="Townhouse End Unit">Townhouse End Unit</option>
+                            <option value="Twnhs">Townhouse Inside Unit</option>
+                            <option value="Duplex">Duplex</option>
+                            <option value="Two Family Conversion">Two Family Conversion</option>
+                        </select>
+
+                        <label for="sale_type">Sale Type:</label>
+                        <select id="sale_type" required>
+                            <option value="WD">Warranty Deed</option>
+                            <option value="New">New Construction</option>
+                            <option value="COD">Court Officer Deed/Estate</option>
+                            <option value="ConLI">Contract Low Interest</option>
+                            <option value="Con">Contract 15% Down</option>
+                            <option value="ConLD">Contract Low Down</option>
+                            <option value="Oth">Other</option>
+                            <option value="ConLw">Contract Low Down payment</option>
+                            <option value="CWD">Warranty Deed - Cash</option>
+                            <option value="VWD">VA Warranty Deed</option>
+                        </select>
+
+                        <label for="sale_condition">Sale Condition:</label>
+                        <select id="sale_condition" required>
+                            <option value="Normal">Normal</option>
+                            <option value="Partial">Partial (New Build)</option>
+                            <option value="Family">Family</option>
+                            <option value="Abnorml">Abnormal</option>
+                            <option value="Alloca">Allocation</option>
+                            <option value="AdjLand">Adjoining Land</option>
+                        </select>
 
                     <button type="submit">Get Price Estimate</button>
                 </form>
-                
-                <div id="result-container" style="display: none; margin-top: 20px; text-align: center; color: antiquewhite;">
+                <div id="result-container" style="display: none;">
                     <h3>Estimated Price Range:</h3>
-                    <p id="price-range" style="font-size: 24px; font-weight: bold; color: #4CAF50;"></p>
+                    <p id="price-range" style="font-size: 24px; color: #4CAF50;"></p>
                 </div>
-
             </div>
-        </div> </div> <div class="free-space"></div>
-    
+        </div>
+        <div id="about">
+            <h1>About Us</h1>
+            <p>Developed by <strong>Mohammad Jawad Hasan</strong></p>
+            <a href="https://github.com/MJwd-Hasan">Github</a>
+        </div>
+    </div> <!mother div ends here>
     <button id="backToTop" class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="m18 15-6-6-6 6"/>
         </svg>
     </button>
-    <script src='script.js'></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
