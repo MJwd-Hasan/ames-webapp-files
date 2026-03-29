@@ -11,7 +11,7 @@ const observer = new IntersectionObserver((entries) => {
             }
         });
     }, { 
-        threshold: 0.5 // Trigger as soon as the container leaves the screen
+        threshold: 0.2 // Trigger as soon as the container leaves the screen
     });
 
 observer.observe(container);
