@@ -107,9 +107,6 @@ h1 {
     100% { transform: translate(-50%, -40%) rotate(2deg); }
 }
 
-
-
-
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -156,7 +153,6 @@ h1 {
 }
 
 #voyager h2 {
-    
     color: antiquewhite;
 }
 
@@ -188,9 +184,11 @@ h1 {
     animation: autoBlurAnimation linear both;
     animation-timeline: view();
 }
+
 .hero-content strong {
     color: #4CAF50;
 }
+
 @supports not (animation-timeline: view()) {
     .hero-content h2 {
         filter: blur(0);
@@ -204,7 +202,6 @@ h1 {
     20%, 80% { filter: blur(0); opacity: 1; transform: translateY(0); }
     100% { filter: blur(20px); opacity: 0; transform: translateY(-50px); }
 }
-
 
 @keyframes fadeIn {
     from { opacity: 0; filter: blur(10px); }
@@ -223,7 +220,6 @@ h1 {
     color: antiquewhite;
 }
 
-/*Each section need to be worked on*/
 .each {
     display: flex;
     justify-content: center;
@@ -266,6 +262,7 @@ h1 {
     margin-bottom: 20px;
     transition: transform 0.5s ease;
 }
+
 .mintcontainer p {
     font-size: 4vh;
     filter: blur(3px);
@@ -277,7 +274,7 @@ h1 {
     -webkit-filter: blur(3px);
 }
 
-.mintcontainer bold {
+.mintcontainer strong {
     color: #4CAF50;
     font-size: 5vh;
     text-shadow: 1px 1px 0.1px rgb(36, 255, 7);
@@ -324,6 +321,7 @@ h1 {
     -ms-transition: transform 0.5s ease, blur 2s ease;
     -o-transition: transform 0.5s ease, blur 2s ease;
 }
+
 .each:hover .mintcontainer h1 {
     transform: translateX(20px);
     transition: transform 0.5s ease, opacity 0.2s ease;
@@ -332,6 +330,7 @@ h1 {
     -ms-transition: transform 0.5s ease, opacity 0.2s ease;
     -o-transition: transform 0.5s ease, opacity 0.2s ease;
 }
+
 .each:hover .mintcontainer ul {
     transform: translateX(20px);
     transition: transform 0.5s ease, opacity 0.2s ease;
@@ -345,6 +344,7 @@ h1 {
     0% { transform: translateY(1vh); -webkit-transform: translateY(1vh); -moz-transform: translateY(1vh); -ms-transform: translateY(1vh); -o-transform: translateY(1vh); }
     100% { transform: translateY(-1vh); -webkit-transform: translateY(-1vh); -moz-transform: translateY(-1vh); -ms-transform: translateY(-1vh); -o-transform: translateY(-1vh); }
 }
+
 .predictive_section {
     position: relative;
     padding: 5vh;
@@ -362,16 +362,16 @@ h1 {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
 }
+
 #prediction-form label {
     color: rgba(250, 235, 215, 0.8);
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.5px;
-    margin-bottom: -10px; /* Pulls the label a bit closer to the input */
+    margin-bottom: -10px;
     transition: color 0.3s ease;
 }
 
-/* Grouping input and select together so they look identical */
 #prediction-form input,
 #prediction-form select {
     width: 100%;
@@ -383,47 +383,33 @@ h1 {
     font-size: 16px;
     outline: none;
     transition: all 0.3s ease;
+    margin-bottom: 25px; 
 }
 
-/* Customizing the Select Dropdown Arrow */
 #prediction-form select {
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    /* This creates a custom antiquewhite arrow instead of the ugly default browser one */
     background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23faebd7%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
     background-repeat: no-repeat;
     background-position: right 15px top 50%;
     background-size: 12px auto;
 }
 
-/* Styling the actual dropdown list options to stay dark */
 #prediction-form select option {
     background-color: #141414;
     color: antiquewhite;
     padding: 10px;
 }
 
-/* The Glowing Focus Effect when a user clicks a box */
-#prediction-form input,
-#prediction-form select {
-    width: 100%;
-    padding: 15px;
-    background-color: #141414;
-    border: 1px solid rgba(250, 235, 215, 0.2);
-    border-radius: 8px;
-    color: antiquewhite;
-    font-size: 16px;
-    outline: none;
-    transition: all 0.3s ease;
-    
-    /* ADD THIS LINE: Pushes the next label further down */
-    margin-bottom: 25px; 
+#prediction-form input:focus,
+#prediction-form select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+    background-color: #1a1a1a;
 }
 
-
-/* Button Styling and Hover Animation */
 #prediction-form button {
     margin-top: 20px;
     padding: 15px;
@@ -444,12 +430,10 @@ h1 {
     box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
 }
 
-
-/* About Us Section */
 #about {
     padding: 6vh 4vh;
     text-align: center;
-    margin: 10vh auto; /* Centers the card and gives it breathing room */
+    margin: 10vh auto;
     width: 90%;
     max-width: 600px;
     background-color: rgba(20, 20, 20, 0.8);
@@ -466,18 +450,17 @@ h1 {
 }
 
 #about p {
-    color: rgba(250, 235, 215, 0.8); /* Slightly dimmed text so the name pops */
+    color: rgba(250, 235, 215, 0.8);
     font-size: 18px;
     margin-bottom: 30px;
     letter-spacing: 0.5px;
 }
 
 #about strong {
-    color: #4CAF50; /* Uses your site's signature green for the developer name */
+    color: #4CAF50;
     font-weight: 600;
 }
 
-/* Styling the Github link to look like your submit button */
 #about a {
     display: inline-block;
     padding: 12px 30px;
@@ -486,7 +469,6 @@ h1 {
     backdrop-filter: blur(8px);
     border-radius: 8px;
     font-size: 16px;
-
     font-weight: bold;
     transition: all 0.3s ease;
 }
@@ -498,82 +480,31 @@ h1 {
     box-shadow: 0 4px 15px rgba(250, 235, 215, 0.356);
     border-top: 1px solid rgba(255, 255, 255, 0.205);
     border-left: 1px solid rgba(255, 255, 255, 0.205);
-
-}
-@media screen and (max-width: 1024px) {
-    h1 { font-size: 150px; }
-    
-    /* Adjust hero text offsets for smaller font */
-    .GREEN { transform: translateX(30px); }
-    .TEA { transform: translate(-100px, 150px); }
-    
-    .can { width: 350px; }
-    .rotcan { width: 400px; height: 400px; }
-
-    /* Shrink the drink section images slightly */
-    .each { gap: 30px; }
-    .each img { width: 300px; }
-    
-    #history h2 { 
-        font-size: 40px; 
-        transform: translateY(400px); /* Adjusting that massive drop */
-    }
 }
 
-/* Small Tablets & Large Phones */
-@media screen and (max-width: 768px) {
-    /* Stack the drink sections vertically instead of side-by-side */
-    .each {
-        flex-direction: column;
-        text-align: center;
-        padding: 5vh 5%;
-        gap: 20px;
-    }
-    
-    /* Center the text and list items */
-    .mintcontainer ul { text-align: center; }
-    
-    /* Disable the hover blur effect for touch devices */
-    .each img {
-        filter: blur(0);
-        -webkit-filter: blur(0);
-        transform: rotate(0deg) !important; /* Stand the image up straight */
-        animation: hovering 4s alternate infinite; /* Use the gentler float */
-    }
-    
-    .each p {
-        filter: blur(0);
-        -webkit-filter: blur(0);
-    }
-}
 /* =========================================
    RESPONSIVE DESIGN (Tablets & Phones)
    ========================================= */
 
-/* Tablets (iPad, etc.) */
 @media screen and (max-width: 1024px) {
     h1 { font-size: 150px; }
     
-    /* Adjust hero text offsets for smaller font */
     .GREEN { transform: translateX(30px); }
     .TEA { transform: translate(-100px, 150px); }
     
     .can { width: 350px; }
     .rotcan { width: 400px; height: 400px; }
 
-    /* Shrink the drink section images slightly */
     .each { gap: 30px; }
     .each img { width: 300px; }
     
     #history h2 { 
         font-size: 40px; 
-        transform: translateY(400px); /* Adjusting that massive drop */
+        transform: translateY(400px); 
     }
 }
 
-/* Small Tablets & Large Phones */
 @media screen and (max-width: 768px) {
-    /* Stack the drink sections vertically instead of side-by-side */
     .each {
         flex-direction: column;
         text-align: center;
@@ -581,15 +512,13 @@ h1 {
         gap: 20px;
     }
     
-    /* Center the text and list items */
     .mintcontainer ul { text-align: center; }
     
-    /* Disable the hover blur effect for touch devices */
     .each img {
         filter: blur(0);
         -webkit-filter: blur(0);
-        transform: rotate(0deg) !important; /* Stand the image up straight */
-        animation: hovering 4s alternate infinite; /* Use the gentler float */
+        transform: rotate(0deg) !important;
+        animation: hovering 4s alternate infinite; 
     }
     
     .each p {
@@ -598,24 +527,19 @@ h1 {
     }
 }
 
-/* Mobile Phones */
 @media screen and (max-width: 600px) {
-    /* Navigation adjustments */
     .titles { gap: 2vh; flex-wrap: wrap; justify-content: center; }
     h3 { font-size: 14px; }
     
-    /* Hero Section */
     h1 { font-size: 80px; }
-    /* Reset offsets so text stays grouped tightly on small screens */
     .GREEN { transform: translateY(-20px); }
     .TEA { transform: translateY(20px); }
     .can { width: 220px; }
     .titletext { flex-direction: column; gap: 0; }
     
-    /* Content sections */
     #history h2 { 
         font-size: 30px; 
-        transform: translateY(150px); /* Bring text back up to view */
+        transform: translateY(150px); 
     }
     #history p { font-size: 16px; margin: 10px; }
     
@@ -623,15 +547,14 @@ h1 {
     
     .mintcontainer h1 { font-size: 5vh; }
     .mintcontainer p { font-size: 3vh; }
-    .mintcontainer bold { font-size: 4vh; }
+    .mintcontainer strong { font-size: 4vh; }
     
-    /* Forms and Cards */
     .form, #about {
         width: 95%;
         padding: 25px 15px;
     }
     
-    #scatter-plot, #boxplot, #lineplot {
-        height: 400px; /* Reduce graph height slightly for mobile */
+    #scatter-plot, #boxplot, #lineplot, #mapplot {
+        height: 400px; 
     }
 }
