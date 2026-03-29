@@ -172,17 +172,16 @@ h1 {
     backdrop-filter: blur(2px);
 }
 
-
 .hero-content {
     color: antiquewhite;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5vh;
-    font-size: 450%;
-    perspective: 1000px;
+    gap: 2rem;
+    font-size: clamp(2rem, 8vw, 5rem);
     height: 100vh;
+    text-align: center;
 }
 
 .hero-content h2 {
@@ -201,10 +200,11 @@ h1 {
 }
 
 @keyframes autoBlurAnimation {
-    0% { filter: blur(40px); opacity: 0; }
-    45%, 55% { filter: blur(0); opacity: 1; }
-    100% { filter: blur(40px); opacity: 0; }
+    0% { filter: blur(20px); opacity: 0; transform: translateY(50px); }
+    20%, 80% { filter: blur(0); opacity: 1; transform: translateY(0); }
+    100% { filter: blur(20px); opacity: 0; transform: translateY(-50px); }
 }
+
 
 @keyframes fadeIn {
     from { opacity: 0; filter: blur(10px); }
